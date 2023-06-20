@@ -1,0 +1,170 @@
+@media only screen and (min-width:1024px){
+    section{
+        margin: 2rem 2.5rem;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        min-height: 58em;
+    }
+    .form-container{
+        max-width: 90%;
+        min-height: 50em;
+
+        & h1{
+            font-size: 5.5em;
+            transition: all 0.5s ease;
+        }
+        & input{
+            font-size: 44px;
+        }
+        
+    }
+    .my-carousel{
+        margin-top: 2em;
+    }
+    .img-me{
+        max-width: 23em;
+    }
+   
+}
+
+/*Tablet*/
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    
+    html{
+        font-size: 95%;
+    }
+    nav{
+        padding: 0 2rem;
+        
+        & .nav-list .nav-item{
+            padding: 0 20px;
+        }
+    }
+
+    section{
+        margin: 0rem 1.5rem;
+    }
+    .images{
+        background-position: center;
+        background-size: cover;
+    }
+    
+   
+    .form-container{
+        max-width: 95%;
+        min-height: 50em;
+        margin-right: 4rem;
+
+        
+        & input{
+            font-size: 44px;
+            width: 100%;
+
+            & ::placeholder{
+                width: 100%;
+            }
+        }
+    }
+  
+    .img-me{
+        width: 100%;
+    }
+
+    .my-carousel{
+        margin-top: 2em;
+       
+        
+    }
+   
+   
+   
+}
+
+
+
+/*Mobile*/
+
+@media only screen and
+(max-width:767px){
+//(max-width:480px){ 
+
+    
+  
+    .logo-gc{
+        margin-bottom: .65rem;
+    }
+    nav .nav-list{
+            display: grid;
+            position: absolute;
+            background: $primary-color;
+            width: 100%;
+            top: 75px;
+            left: 0;
+            transform: translateY(-100%);
+            z-index: -1;
+            transition: .6s;
+
+        & .nav-item{
+                padding-left: 35px;
+
+            }
+           
+    }
+    nav .navbar-toggler{
+            display: grid;
+    }
+    input:checked ~ nav .nav-list {
+            transform: translateY(0%);
+            z-index: 1;
+    }
+    section{
+        margin: 1rem 1.5rem;
+    }
+    
+    .form-container{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+        & input{
+            width: 100%;
+            
+            &::placeholder{
+                width: 100%;
+            }
+        }
+        & textarea{
+            width: 100%;
+        }
+        
+
+        & #button{
+            margin-top: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .form-control{
+        width: 20rem;
+    }
+    
+    .my-carousel{
+        margin-top: 2em;
+    }
+    
+    .img-me{
+        max-width: 18em;
+    }
+    .project-item{
+        max-width: 22em;
+    }
+    .title-center{
+        margin-top: 1em;
+    }
+}

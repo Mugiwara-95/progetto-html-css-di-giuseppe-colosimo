@@ -1,0 +1,574 @@
+/*Config.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  max-height: 100vh;
+  background-color: #2B2E3B;
+  color: #eeeee4;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background-color: #eeeee4;
+  color: #2B2E3B;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  color: #2B2E3B;
+  border-radius: 10px;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #2B2E3B;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15%;
+  height: 75px;
+  line-height: 75px;
+  background-color: #2B2E3B;
+}
+nav .logo-gc {
+  height: 4rem;
+  padding-top: 0.5rem;
+}
+nav .nav-list {
+  display: flex;
+  list-style: none;
+}
+nav .nav-list .nav-item {
+  height: 100%;
+  padding: 0.4rem 1rem;
+  transition: 0.4s;
+  color: #eeeee4;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+nav .nav-list .nav-item a {
+  padding: 1rem;
+  padding: 0.4rem 1rem;
+}
+nav .nav-list .nav-item a:hover {
+  background-color: #eeeee4;
+  color: #2B2E3B;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.6s;
+}
+nav .nav-list .nav-link {
+  color: #eeeee4;
+  font-size: 18px;
+  font-weight: bold;
+}
+nav .navbar-toggler {
+  display: none;
+  height: min-content;
+  margin: 18px -10px 0 0;
+  cursor: pointer;
+}
+nav .navbar-toggler .bar {
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background: #eeeee4;
+  border-radius: 10%;
+  transition: 0.4s;
+}
+
+input {
+  display: none;
+}
+input:checked ~ nav .nav-list {
+  transform: translateY(0);
+}
+input:checked ~ nav .navbar-toggler {
+  margin-top: 35px;
+}
+input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
+  position: absolute;
+  transform: rotate(45deg);
+}
+input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
+  display: none;
+}
+input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+footer {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 1.7rem;
+}
+.social a {
+  color: #eeeee4;
+  font-size: 2rem;
+  padding: 0.3rem;
+  text-align: center;
+  width: 26px;
+}
+.social a:hover {
+  color: #eeeee4;
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+  box-shadow: 0 0.5em 0.5em -0.4em #2B2E3B;
+}
+
+/*Index*/
+section {
+  margin: 2rem 8.5rem;
+}
+
+h2 {
+  font-weight: bold;
+  color: #eeeee4;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5rem auto;
+}
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.main p {
+  margin-top: 1rem;
+  font-size: 0.98rem;
+}
+
+.clr-name {
+  color: #00CC8F;
+}
+
+.main h1 span:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.button button {
+  background-color: #00CC8F;
+  border: 1px solid #00CC8F;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+}
+.button button:hover {
+  background-color: #eeeee4;
+  border: #eeeee4;
+  color: #2B2E3B;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.91);
+  font-weight: bold;
+}
+.button button a {
+  text-decoration: none;
+  color: #2B2E3B;
+  font-weight: bold;
+}
+
+.skills {
+  width: 26em;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+  border: 2px solid #00CC8F;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgb(0, 0, 0), 0 10px 10px rgb(0, 0, 0);
+}
+.skills h1 {
+  text-align: center;
+}
+.skills h3 {
+  margin: 5px;
+}
+.skills li {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  list-style: none;
+}
+
+.bar-skill {
+  background: #2B2E3B;
+  display: block;
+  height: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.bar-skill:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.bar-skill span {
+  height: 20px;
+  float: left;
+  background: linear-gradient(90deg, rgb(6, 179, 107) 0%, rgba(0, 204, 61, 0.9948354342) 42%, rgba(52, 255, 0, 0.6390931373) 61%);
+}
+
+.html {
+  width: 70%;
+}
+
+.css {
+  width: 50%;
+}
+
+.my-carousel {
+  position: relative;
+  text-align: center;
+  width: 550px;
+  height: auto;
+}
+.my-carousel img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-title:hover {
+  color: #00CC8F;
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5em 0.5em -0.4em none;
+}
+
+.footer-index {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: -4.5em;
+}
+
+/*About Me*/
+.title-center {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  transition: all 0.6s ease;
+  text-decoration: underline;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+.title-center:hover {
+  transform: translateY(-6px);
+  color: #00CC8F;
+}
+
+.about-me-text {
+  font-size: 2em;
+  transition: all 0.6s ease;
+}
+.about-me-text li {
+  list-style: none;
+  color: #00CC8F;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.about-me-text .about-me-list {
+  transition: all 0.6s ease;
+  margin-bottom: 0.8em;
+  margin-top: 0.5em;
+}
+
+.img-me-div {
+  display: flex;
+  justify-content: center;
+}
+
+.img-me {
+  max-width: 36em;
+  height: auto;
+  transition: all 0.6s ease;
+}
+
+.footer-about {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: -6em;
+}
+
+/*Projects*/
+.portfolio-title {
+  display: flex;
+  justify-content: center;
+}
+.portfolio-title h1 {
+  font-size: 4em;
+  border-bottom: 2px solid;
+  transition: all 0.6s ease;
+  margin-top: 0.5em;
+}
+.portfolio-title h1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  color: #00CC8F;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.portfolio .project {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  gap: 2em;
+  margin-top: 25px;
+}
+.portfolio .project a > img {
+  width: 100%;
+  border: 1px solid #00CC8F;
+  border-radius: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio .project a > img:hover {
+  transition: all 0.5s ease;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/*Contact*/
+.form-container {
+  border: 2px solid #00CC8F;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 35em;
+  min-height: 40em;
+  padding: 1em;
+  gap: 0.8em;
+  border-radius: 20px;
+  margin-left: 5.5em;
+  margin-top: 5em;
+}
+.form-container input {
+  width: 100%;
+}
+.form-container textarea {
+  width: 100%;
+}
+
+.form-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding-right: 1em;
+  font-size: 80px;
+  font-weight: bold;
+}
+.form-title:hover {
+  color: #00CC8F;
+  transition: all 0.3s ease;
+}
+
+.mb-3 {
+  text-align: center;
+}
+
+.form-control {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 5px #00CC8F;
+  background: #eeeee4;
+  width: 25rem;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 38px;
+}
+
+.btn-style {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: solid 5px #00CC8F;
+  background: #eeeee4;
+  color: #2B2E3B;
+  width: 15rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-right: 0.7em;
+}
+.btn-style:hover {
+  background-color: #00CC8F;
+  color: #2B2E3B;
+  font-weight: bold;
+}
+
+.footer-contact {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: -2.5rem;
+}
+
+/*Media*/
+@media only screen and (min-width: 1024px) {
+  section {
+    margin: 2rem 2.5rem;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 58em;
+  }
+  .form-container {
+    max-width: 90%;
+    min-height: 50em;
+  }
+  .form-container h1 {
+    font-size: 5.5em;
+    transition: all 0.5s ease;
+  }
+  .form-container input {
+    font-size: 44px;
+  }
+  .my-carousel {
+    margin-top: 2em;
+  }
+  .img-me {
+    max-width: 23em;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 95%;
+  }
+  nav {
+    padding: 0 2rem;
+  }
+  nav .nav-list .nav-item {
+    padding: 0 20px;
+  }
+  section {
+    margin: 0rem 1.5rem;
+  }
+  .images {
+    background-position: center;
+    background-size: cover;
+  }
+  .form-container {
+    max-width: 95%;
+    min-height: 50em;
+    margin-right: 4rem;
+  }
+  .form-container input {
+    font-size: 44px;
+    width: 100%;
+  }
+  .form-container input ::placeholder {
+    width: 100%;
+  }
+  .img-me {
+    width: 100%;
+  }
+  .my-carousel {
+    margin-top: 2em;
+  }
+}
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+  .logo-gc {
+    margin-bottom: 0.65rem;
+  }
+  nav .nav-list {
+    display: grid;
+    position: absolute;
+    background: #2B2E3B;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    transform: translateY(-100%);
+    z-index: -1;
+    transition: 0.6s;
+  }
+  nav .nav-list .nav-item {
+    padding-left: 35px;
+  }
+  nav .navbar-toggler {
+    display: grid;
+  }
+  input:checked ~ nav .nav-list {
+    transform: translateY(0%);
+    z-index: 1;
+  }
+  section {
+    margin: 1rem 1.5rem;
+  }
+  .form-container {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .form-container input {
+    width: 100%;
+  }
+  .form-container input::placeholder {
+    width: 100%;
+  }
+  .form-container textarea {
+    width: 100%;
+  }
+  .form-container #button {
+    margin-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-control {
+    width: 20rem;
+  }
+  .my-carousel {
+    margin-top: 2em;
+  }
+  .img-me {
+    max-width: 18em;
+  }
+  .project-item {
+    max-width: 22em;
+  }
+  .title-center {
+    margin-top: 1em;
+  }
+}/*# sourceMappingURL=style.css.map */

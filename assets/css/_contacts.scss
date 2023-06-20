@@ -1,0 +1,79 @@
+.form-container{
+    border: 2px solid $third-color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 35em;
+    min-height: 40em;
+    padding: 1em; 
+    gap: 0.8em;
+    border-radius: 20px;
+    margin-left: 5.5em;
+    margin-top: 5em;
+
+    & input{
+        width: 100%;
+    }
+    & textarea{
+        width: 100%;
+    }
+
+   
+}
+.form-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    padding-right: 1em;
+    font-size: 80px;
+    font-weight: bold;
+
+    &:hover{
+        color: $third-color;
+        transition: all .3s ease;
+    }
+}
+.mb-3{
+    text-align: center;
+}
+.form-control{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 5px $third-color;
+    background: $secondary-color;
+    width: 25rem;
+}
+.form-label{
+    font-weight: bold;
+    font-size: 38px;
+}
+.btn-style{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 5px $third-color;
+    background: $secondary-color;
+    color: $primary-color;
+    width: 15rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-right: .7em;
+
+    &:hover{
+        background-color: $third-color;
+        color: $primary-color;
+        font-weight: bold;
+        
+    }
+}
+.footer-contact{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: -2.5rem;
+}
+
